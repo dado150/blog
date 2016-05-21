@@ -15,6 +15,15 @@
 		0B4477BC1CF0C3C0002CEEED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4477BA1CF0C3C0002CEEED /* LaunchScreen.storyboard */; };
 		0B4477C71CF0C3C0002CEEED /* _50UPBlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4477C61CF0C3C0002CEEED /* _50UPBlogTests.swift */; };
 		0B4477D21CF0C3C0002CEEED /* _50UPBlogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4477D11CF0C3C0002CEEED /* _50UPBlogUITests.swift */; };
+		0B4477E01CF0C7A1002CEEED /* f9ab0c37011735.5731d42839501.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B4477DF1CF0C7A1002CEEED /* f9ab0c37011735.5731d42839501.jpg */; };
+		0B4477E41CF0C964002CEEED /* Brown-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0B4477E21CF0C964002CEEED /* Brown-Bold.otf */; };
+		0B4477E51CF0C964002CEEED /* Brown-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0B4477E31CF0C964002CEEED /* Brown-Regular.otf */; };
+		0BAF17D61CF0CEED0028D5DC /* Spring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDF05F41CF0CD7F005FA3F6 /* Spring.framework */; };
+		0BAF17D71CF0CEF00028D5DC /* Spring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDF05F41CF0CD7F005FA3F6 /* Spring.framework */; };
+		0BAF17D81CF0CEF00028D5DC /* Spring.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDF05F41CF0CD7F005FA3F6 /* Spring.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E6F84DCFD854C769B1A4384 /* Pods_150UPBlogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE0FF9159F8C50A9B8F47E6 /* Pods_150UPBlogUITests.framework */; };
+		35493E623F4E814B400577FA /* Pods_150UPBlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385D383DE3355AE3F57D6A92 /* Pods_150UPBlog.framework */; };
+		9F5821BCA07DBAEEBDC49E51 /* Pods_150UPBlogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D265F7F6316BC326EEC57B /* Pods_150UPBlogTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0BAF17D91CF0CEF10028D5DC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0BAF17D81CF0CEF00028D5DC /* Spring.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0B4477AB1CF0C3BF002CEEED /* 150UPBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 150UPBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4477AE1CF0C3C0002CEEED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +72,19 @@
 		0B4477CD1CF0C3C0002CEEED /* 150UPBlogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 150UPBlogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4477D11CF0C3C0002CEEED /* _50UPBlogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _50UPBlogUITests.swift; sourceTree = "<group>"; };
 		0B4477D31CF0C3C0002CEEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B4477DF1CF0C7A1002CEEED /* f9ab0c37011735.5731d42839501.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = f9ab0c37011735.5731d42839501.jpg; sourceTree = "<group>"; };
+		0B4477E21CF0C964002CEEED /* Brown-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brown-Bold.otf"; sourceTree = "<group>"; };
+		0B4477E31CF0C964002CEEED /* Brown-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brown-Regular.otf"; sourceTree = "<group>"; };
+		0BDF05F41CF0CD7F005FA3F6 /* Spring.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spring.framework; path = "../../Library/Developer/Xcode/DerivedData/150UPBlog-edhplpuuldunpkgrfymqknmhhsos/Build/Products/Debug-iphonesimulator/Spring/Spring.framework"; sourceTree = "<group>"; };
+		385D383DE3355AE3F57D6A92 /* Pods_150UPBlog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_150UPBlog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47030BEA83F47B74A578218D /* Pods-150UPBlogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-150UPBlogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-150UPBlogTests/Pods-150UPBlogTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5EE0FF9159F8C50A9B8F47E6 /* Pods_150UPBlogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_150UPBlogUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60D265F7F6316BC326EEC57B /* Pods_150UPBlogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_150UPBlogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A7F5A717EE5DFA62DC14B50 /* Pods-150UPBlogUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-150UPBlogUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-150UPBlogUITests/Pods-150UPBlogUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		920DDA95F3D91C6DCF202A97 /* Pods-150UPBlog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-150UPBlog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-150UPBlog/Pods-150UPBlog.debug.xcconfig"; sourceTree = "<group>"; };
+		959DB8A2FA0A0648F7B249E5 /* Pods-150UPBlogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-150UPBlogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-150UPBlogTests/Pods-150UPBlogTests.release.xcconfig"; sourceTree = "<group>"; };
+		A48513FD79B8176479D08724 /* Pods-150UPBlogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-150UPBlogUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-150UPBlogUITests/Pods-150UPBlogUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CBEF61ECA6811EAEAA74BB9A /* Pods-150UPBlog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-150UPBlog.release.xcconfig"; path = "Pods/Target Support Files/Pods-150UPBlog/Pods-150UPBlog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BAF17D61CF0CEED0028D5DC /* Spring.framework in Frameworks */,
+				35493E623F4E814B400577FA /* Pods_150UPBlog.framework in Frameworks */,
+				0BAF17D71CF0CEF00028D5DC /* Spring.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5821BCA07DBAEEBDC49E51 /* Pods_150UPBlogTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E6F84DCFD854C769B1A4384 /* Pods_150UPBlogUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +124,8 @@
 				0B4477C51CF0C3C0002CEEED /* 150UPBlogTests */,
 				0B4477D01CF0C3C0002CEEED /* 150UPBlogUITests */,
 				0B4477AC1CF0C3BF002CEEED /* Products */,
+				0F56D9D98077F57CBF0A782D /* Pods */,
+				5291F84DC29481AC64320E51 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +142,7 @@
 		0B4477AD1CF0C3C0002CEEED /* 150UPBlog */ = {
 			isa = PBXGroup;
 			children = (
+				0B4477E11CF0C7AC002CEEED /* Resources */,
 				0B4477AE1CF0C3C0002CEEED /* AppDelegate.swift */,
 				0B4477B01CF0C3C0002CEEED /* ViewController.swift */,
 				0B4477B21CF0C3C0002CEEED /* Main.storyboard */,
@@ -128,6 +172,40 @@
 			path = 150UPBlogUITests;
 			sourceTree = "<group>";
 		};
+		0B4477E11CF0C7AC002CEEED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B4477E21CF0C964002CEEED /* Brown-Bold.otf */,
+				0B4477E31CF0C964002CEEED /* Brown-Regular.otf */,
+				0B4477DF1CF0C7A1002CEEED /* f9ab0c37011735.5731d42839501.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0F56D9D98077F57CBF0A782D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				920DDA95F3D91C6DCF202A97 /* Pods-150UPBlog.debug.xcconfig */,
+				CBEF61ECA6811EAEAA74BB9A /* Pods-150UPBlog.release.xcconfig */,
+				47030BEA83F47B74A578218D /* Pods-150UPBlogTests.debug.xcconfig */,
+				959DB8A2FA0A0648F7B249E5 /* Pods-150UPBlogTests.release.xcconfig */,
+				6A7F5A717EE5DFA62DC14B50 /* Pods-150UPBlogUITests.debug.xcconfig */,
+				A48513FD79B8176479D08724 /* Pods-150UPBlogUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5291F84DC29481AC64320E51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BDF05F41CF0CD7F005FA3F6 /* Spring.framework */,
+				385D383DE3355AE3F57D6A92 /* Pods_150UPBlog.framework */,
+				60D265F7F6316BC326EEC57B /* Pods_150UPBlogTests.framework */,
+				5EE0FF9159F8C50A9B8F47E6 /* Pods_150UPBlogUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +213,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B4477D61CF0C3C0002CEEED /* Build configuration list for PBXNativeTarget "150UPBlog" */;
 			buildPhases = (
+				F0E0FAF689AD0098F0706D68 /* 📦 Check Pods Manifest.lock */,
 				0B4477A71CF0C3BF002CEEED /* Sources */,
 				0B4477A81CF0C3BF002CEEED /* Frameworks */,
 				0B4477A91CF0C3BF002CEEED /* Resources */,
+				B43D72B1D4D2F69391DCA130 /* 📦 Embed Pods Frameworks */,
+				31A39E5241E964A5D8D84C91 /* 📦 Copy Pods Resources */,
+				0BAF17D91CF0CEF10028D5DC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B4477D91CF0C3C0002CEEED /* Build configuration list for PBXNativeTarget "150UPBlogTests" */;
 			buildPhases = (
+				7F356D2F110D660BE42A9A3E /* 📦 Check Pods Manifest.lock */,
 				0B4477BE1CF0C3C0002CEEED /* Sources */,
 				0B4477BF1CF0C3C0002CEEED /* Frameworks */,
 				0B4477C01CF0C3C0002CEEED /* Resources */,
+				5771F19C8DF2A2AAA38762E5 /* 📦 Embed Pods Frameworks */,
+				06A2F05B5D7F47A0E3F43ECC /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +255,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B4477DC1CF0C3C0002CEEED /* Build configuration list for PBXNativeTarget "150UPBlogUITests" */;
 			buildPhases = (
+				CEABB1558C4C5CB16E324C50 /* 📦 Check Pods Manifest.lock */,
 				0B4477C91CF0C3C0002CEEED /* Sources */,
 				0B4477CA1CF0C3C0002CEEED /* Frameworks */,
 				0B4477CB1CF0C3C0002CEEED /* Resources */,
+				FDCBA0020B01F07DFCB15EC0 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,9 +319,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4477E41CF0C964002CEEED /* Brown-Bold.otf in Resources */,
 				0B4477BC1CF0C3C0002CEEED /* LaunchScreen.storyboard in Resources */,
 				0B4477B91CF0C3C0002CEEED /* Assets.xcassets in Resources */,
+				0B4477E01CF0C7A1002CEEED /* f9ab0c37011735.5731d42839501.jpg in Resources */,
 				0B4477B41CF0C3C0002CEEED /* Main.storyboard in Resources */,
+				0B4477E51CF0C964002CEEED /* Brown-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +343,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06A2F05B5D7F47A0E3F43ECC /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-150UPBlogTests/Pods-150UPBlogTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31A39E5241E964A5D8D84C91 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-150UPBlog/Pods-150UPBlog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5771F19C8DF2A2AAA38762E5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-150UPBlogTests/Pods-150UPBlogTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F356D2F110D660BE42A9A3E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B43D72B1D4D2F69391DCA130 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-150UPBlog/Pods-150UPBlog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEABB1558C4C5CB16E324C50 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0E0FAF689AD0098F0706D68 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDCBA0020B01F07DFCB15EC0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-150UPBlogUITests/Pods-150UPBlogUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0B4477A71CF0C3BF002CEEED /* Sources */ = {
@@ -403,6 +616,7 @@
 		};
 		0B4477D71CF0C3C0002CEEED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 920DDA95F3D91C6DCF202A97 /* Pods-150UPBlog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 150UPBlog/Info.plist;
@@ -414,6 +628,7 @@
 		};
 		0B4477D81CF0C3C0002CEEED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBEF61ECA6811EAEAA74BB9A /* Pods-150UPBlog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 150UPBlog/Info.plist;
@@ -425,6 +640,7 @@
 		};
 		0B4477DA1CF0C3C0002CEEED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47030BEA83F47B74A578218D /* Pods-150UPBlogTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = 150UPBlogTests/Info.plist;
@@ -437,6 +653,7 @@
 		};
 		0B4477DB1CF0C3C0002CEEED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 959DB8A2FA0A0648F7B249E5 /* Pods-150UPBlogTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = 150UPBlogTests/Info.plist;
@@ -449,6 +666,7 @@
 		};
 		0B4477DD1CF0C3C0002CEEED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A7F5A717EE5DFA62DC14B50 /* Pods-150UPBlogUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = 150UPBlogUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -460,6 +678,7 @@
 		};
 		0B4477DE1CF0C3C0002CEEED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A48513FD79B8176479D08724 /* Pods-150UPBlogUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = 150UPBlogUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -488,6 +707,7 @@
 				0B4477D81CF0C3C0002CEEED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B4477D91CF0C3C0002CEEED /* Build configuration list for PBXNativeTarget "150UPBlogTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +716,7 @@
 				0B4477DB1CF0C3C0002CEEED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B4477DC1CF0C3C0002CEEED /* Build configuration list for PBXNativeTarget "150UPBlogUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +725,7 @@
 				0B4477DE1CF0C3C0002CEEED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
