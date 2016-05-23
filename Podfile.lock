@@ -1,7 +1,11 @@
 PODS:
+  - Bolts/Tasks (1.7.0)
+  - Parse (1.13.0):
+    - Bolts/Tasks (~> 1.6)
   - Spring (1.0.3)
 
 DEPENDENCIES:
+  - Parse
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
 
 EXTERNAL SOURCES:
@@ -15,8 +19,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
+  Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
 
-PODFILE CHECKSUM: bb9c4dbed6da104d8293c04b295d6e110e341673
+PODFILE CHECKSUM: b022f3ab29ed076ec521d7a81f10b29a795ee57d
 
 COCOAPODS: 1.0.0

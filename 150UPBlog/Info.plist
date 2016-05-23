@@ -54,5 +54,10 @@
 		<string>Brown-Bold.otf</string>
 		<string>Brown-Regular.otf</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

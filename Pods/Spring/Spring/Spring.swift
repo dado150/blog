@@ -231,7 +231,7 @@ public class Spring : NSObject {
                 y = 600*force
             case .Shake:
                 let animation = CAKeyframeAnimation()
-                animation.keyPath = "position.x"
+                animation.keyPath = "position.y"
                 animation.values = [0, 30*force, -30*force, 30*force, 0]
                 animation.keyTimes = [0, 0.2, 0.4, 0.6, 0.8, 1]
                 animation.timingFunction = getTimingFunction(curve)
