@@ -162,3 +162,50 @@ class ViewController: UIViewController {
 
 }
 
+//    func doTheMagic(){
+//
+//        let query = Post.query()!
+//
+//        query.whereKey("PublishDate", greaterThanOrEqualTo:newDate)
+//        query.whereKey("PublishDate", lessThan:dateTomorrow)
+//
+//        query.findObjectsInBackgroundWithBlock {
+//            (objects: [PFObject]?, error: NSError?) -> Void in
+//
+//            if error == nil {
+//
+//                print("Successfully retrieved \(objects!.count) scores.")
+//
+//                if let objects = objects {
+//
+//                    (objects as? [Post])?.forEach({ (post) in
+//
+//                        print(post.objectId)
+//                        self.titleLabel.text = post.Title
+//                        self.tagLabel.text = "#" + (post.tag)
+//
+//                        let userImageFile = post.HeroImg
+//                        userImageFile.getDataInBackgroundWithBlock {
+//                            (imageData: NSData?, error: NSError?) -> Void in
+//                            if error == nil {
+//                                if let imageData = imageData {
+//
+//                                    let image = UIImage(data:imageData)
+//                                    self.bigImg.image = image
+//
+//                                    self.inAnimation()
+//
+//                                }
+//                            }
+//                        }
+//                    })
+//                }
+//
+//            } else {
+//                // Log details of the failure
+//                print("Error: \(error!) \(error!.userInfo)")
+//            }
+//        }
+//
+//    }
+

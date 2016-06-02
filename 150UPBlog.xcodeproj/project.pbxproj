@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0B4477AF1CF0C3C0002CEEED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4477AE1CF0C3C0002CEEED /* AppDelegate.swift */; };
-		0B4477B11CF0C3C0002CEEED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4477B01CF0C3C0002CEEED /* ViewController.swift */; };
 		0B4477B41CF0C3C0002CEEED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4477B21CF0C3C0002CEEED /* Main.storyboard */; };
 		0B4477B71CF0C3C0002CEEED /* _50UPBlog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B4477B51CF0C3C0002CEEED /* _50UPBlog.xcdatamodeld */; };
 		0B4477B91CF0C3C0002CEEED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4477B81CF0C3C0002CEEED /* Assets.xcassets */; };
@@ -18,10 +17,14 @@
 		0B4477E01CF0C7A1002CEEED /* f9ab0c37011735.5731d42839501.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B4477DF1CF0C7A1002CEEED /* f9ab0c37011735.5731d42839501.jpg */; };
 		0B4477E41CF0C964002CEEED /* Brown-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0B4477E21CF0C964002CEEED /* Brown-Bold.otf */; };
 		0B4477E51CF0C964002CEEED /* Brown-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0B4477E31CF0C964002CEEED /* Brown-Regular.otf */; };
+		0B4E9CFA1CF73ADE00D7D318 /* screen-shot-2016-05-26-at-9-16-06-am.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4E9CF91CF73ADE00D7D318 /* screen-shot-2016-05-26-at-9-16-06-am.png */; };
+		0B4E9CFC1CF73BBB00D7D318 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4E9CFB1CF73BBB00D7D318 /* bg.png */; };
 		0B7E7F731CF30F670080B419 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E7F721CF30F670080B419 /* Post.swift */; };
 		0B7E7F751CF3144A0080B419 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E7F741CF314490080B419 /* Menu.swift */; };
 		0B7E7F771CF37B7F0080B419 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E7F761CF37B7F0080B419 /* AnimationView.swift */; };
 		0B7E7F791CF3836C0080B419 /* 4b50c837011735.5731d42840423.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B7E7F781CF3836C0080B419 /* 4b50c837011735.5731d42840423.jpg */; };
+		0B8BA6611CF9DD58001BB7A6 /* lineHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BA6601CF9DD58001BB7A6 /* lineHeight.swift */; };
+		0BA0CC291CFCD25C00D56892 /* 150up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA0CC281CFCD25C00D56892 /* 150up.png */; };
 		1E6F84DCFD854C769B1A4384 /* Pods_150UPBlogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE0FF9159F8C50A9B8F47E6 /* Pods_150UPBlogUITests.framework */; };
 		9F5821BCA07DBAEEBDC49E51 /* Pods_150UPBlogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D265F7F6316BC326EEC57B /* Pods_150UPBlogTests.framework */; };
 		D636C9F87346C440EDBF6ACE /* Pods_150UPBlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385D383DE3355AE3F57D6A92 /* Pods_150UPBlog.framework */; };
@@ -47,7 +50,6 @@
 /* Begin PBXFileReference section */
 		0B4477AB1CF0C3BF002CEEED /* 150UPBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 150UPBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4477AE1CF0C3C0002CEEED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B4477B01CF0C3C0002CEEED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B4477B31CF0C3C0002CEEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B4477B61CF0C3C0002CEEED /* _50UPBlog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _50UPBlog.xcdatamodel; sourceTree = "<group>"; };
 		0B4477B81CF0C3C0002CEEED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,10 +64,14 @@
 		0B4477DF1CF0C7A1002CEEED /* f9ab0c37011735.5731d42839501.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = f9ab0c37011735.5731d42839501.jpg; sourceTree = "<group>"; };
 		0B4477E21CF0C964002CEEED /* Brown-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brown-Bold.otf"; sourceTree = "<group>"; };
 		0B4477E31CF0C964002CEEED /* Brown-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brown-Regular.otf"; sourceTree = "<group>"; };
+		0B4E9CF91CF73ADE00D7D318 /* screen-shot-2016-05-26-at-9-16-06-am.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screen-shot-2016-05-26-at-9-16-06-am.png"; sourceTree = "<group>"; };
+		0B4E9CFB1CF73BBB00D7D318 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		0B7E7F721CF30F670080B419 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0B7E7F741CF314490080B419 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		0B7E7F761CF37B7F0080B419 /* AnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		0B7E7F781CF3836C0080B419 /* 4b50c837011735.5731d42840423.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4b50c837011735.5731d42840423.jpg; sourceTree = "<group>"; };
+		0B8BA6601CF9DD58001BB7A6 /* lineHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lineHeight.swift; sourceTree = "<group>"; };
+		0BA0CC281CFCD25C00D56892 /* 150up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 150up.png; sourceTree = "<group>"; };
 		0BDF05F41CF0CD7F005FA3F6 /* Spring.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spring.framework; path = "../../Library/Developer/Xcode/DerivedData/150UPBlog-edhplpuuldunpkgrfymqknmhhsos/Build/Products/Debug-iphonesimulator/Spring/Spring.framework"; sourceTree = "<group>"; };
 		385D383DE3355AE3F57D6A92 /* Pods_150UPBlog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_150UPBlog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47030BEA83F47B74A578218D /* Pods-150UPBlogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-150UPBlogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-150UPBlogTests/Pods-150UPBlogTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,8 +139,8 @@
 			children = (
 				0B4477E11CF0C7AC002CEEED /* Resources */,
 				0B4477AE1CF0C3C0002CEEED /* AppDelegate.swift */,
-				0B4477B01CF0C3C0002CEEED /* ViewController.swift */,
 				0B7E7F761CF37B7F0080B419 /* AnimationView.swift */,
+				0B8BA6601CF9DD58001BB7A6 /* lineHeight.swift */,
 				0B7E7F721CF30F670080B419 /* Post.swift */,
 				0B4477B21CF0C3C0002CEEED /* Main.storyboard */,
 				0B7E7F741CF314490080B419 /* Menu.swift */,
@@ -167,6 +173,9 @@
 		0B4477E11CF0C7AC002CEEED /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0BA0CC281CFCD25C00D56892 /* 150up.png */,
+				0B4E9CFB1CF73BBB00D7D318 /* bg.png */,
+				0B4E9CF91CF73ADE00D7D318 /* screen-shot-2016-05-26-at-9-16-06-am.png */,
 				0B4477E21CF0C964002CEEED /* Brown-Bold.otf */,
 				0B4477E31CF0C964002CEEED /* Brown-Regular.otf */,
 				0B7E7F781CF3836C0080B419 /* 4b50c837011735.5731d42840423.jpg */,
@@ -275,6 +284,7 @@
 				TargetAttributes = {
 					0B4477AA1CF0C3BF002CEEED = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = Y5B7VPX3DG;
 					};
 					0B4477C11CF0C3C0002CEEED = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -313,9 +323,12 @@
 			files = (
 				0B7E7F791CF3836C0080B419 /* 4b50c837011735.5731d42840423.jpg in Resources */,
 				0B4477E41CF0C964002CEEED /* Brown-Bold.otf in Resources */,
+				0B4E9CFC1CF73BBB00D7D318 /* bg.png in Resources */,
 				0B4477BC1CF0C3C0002CEEED /* LaunchScreen.storyboard in Resources */,
 				0B4477B91CF0C3C0002CEEED /* Assets.xcassets in Resources */,
 				0B4477E01CF0C7A1002CEEED /* f9ab0c37011735.5731d42839501.jpg in Resources */,
+				0B4E9CFA1CF73ADE00D7D318 /* screen-shot-2016-05-26-at-9-16-06-am.png in Resources */,
+				0BA0CC291CFCD25C00D56892 /* 150up.png in Resources */,
 				0B4477B41CF0C3C0002CEEED /* Main.storyboard in Resources */,
 				0B4477E51CF0C964002CEEED /* Brown-Regular.otf in Resources */,
 			);
@@ -466,10 +479,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4477B71CF0C3C0002CEEED /* _50UPBlog.xcdatamodeld in Sources */,
-				0B4477B11CF0C3C0002CEEED /* ViewController.swift in Sources */,
 				0B4477AF1CF0C3C0002CEEED /* AppDelegate.swift in Sources */,
 				0B7E7F771CF37B7F0080B419 /* AnimationView.swift in Sources */,
 				0B7E7F731CF30F670080B419 /* Post.swift in Sources */,
+				0B8BA6611CF9DD58001BB7A6 /* lineHeight.swift in Sources */,
 				0B7E7F751CF3144A0080B419 /* Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -616,10 +629,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = 150UPBlog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.150up..-50UPBlog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -629,10 +644,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = 150UPBlog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.150up..-50UPBlog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -14,17 +14,23 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         Post.registerSubclass()
         
         Parse.setApplicationId("xrg8UGlMd32qCW5dHJwTO3py5eGjrdxQ3RM1E1kq", clientKey: "k1PaRCBxluViUsZCoERpfe3XfiGM1aZNqGarQngJ")
+        
+        
+        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
 
         
-        
         return true
+    }
+    
+    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+        NSNotificationCenter.defaultCenter().postNotificationName("notificationSetted", object: nil)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -42,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
+                
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
