@@ -81,6 +81,10 @@
                                     <constraint firstAttribute="trailing" secondItem="ZEU-jH-TBB" secondAttribute="trailing" id="lfA-fU-ruN"/>
                                     <constraint firstAttribute="bottom" secondItem="ZEU-jH-TBB" secondAttribute="bottom" id="xZ6-ta-1R4"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideDown"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQQ-jG-ZFN" customClass="SpringLabel" customModule="Spring">
                                 <rect key="frame" x="21" y="484" width="558" height="0.0"/>

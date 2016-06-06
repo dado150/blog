@@ -155,6 +155,7 @@ class Menu: UIViewController {
         }
         
         sender.setTitle("\(storage.valueForKey("timeNotification")!):00", forState: .Normal)
+        
         UIApplication.sharedApplication().cancelAllLocalNotifications()
         notificatonScheduling()
         

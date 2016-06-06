@@ -40,10 +40,6 @@ class AnimationView: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-//        boxImage.animation = "slideDown"
-//        boxImage.autostart = true
-//        boxImage.animate()
-        
         boxImage.frame = CGRectMake((view.frame.size.width / 2) - 10, (view.frame.size.height / 2) - 10, 20, 20)
         boxImage.layer.cornerRadius = boxImage.frame.size.width / 2
         
@@ -57,7 +53,16 @@ class AnimationView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        boxImage.animation = "slideDown"
+        boxImage.autostart = true
+        boxImage.duration = 1
+        boxImage.delay = 1
+        boxImage.animate()
+        
+        bigImg.animation = "slideDown"
+        bigImg.autostart = true
+        bigImg.animate()
         
         tomorrow = cal.dateByAddingUnit(.Day, value: 1, toDate: NSDate(), options: [])!
         newDate = cal.startOfDayForDate(date)
@@ -70,10 +75,7 @@ class AnimationView: UIViewController {
         
         dateLabel.text = "\(day).\(month).\(year)"
         
-
-        
-        
-        let triggerTime = (Int64(NSEC_PER_MSEC) * 250)
+        let triggerTime = (Int64(NSEC_PER_SEC) * 2)
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
             self.doTheMagic()
         })
@@ -84,13 +86,12 @@ class AnimationView: UIViewController {
         self.menu.view.backgroundColor = blue
         self.view.addSubview(self.menu.view)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AnimationView.observerNotification), name: "notificationSetted", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(observerNotification), name: "notificationSetted", object: nil)
         
         
-//        dateLabel.y = -40
-//        dateLabel.duration = 0.5
-//        dateLabel.delay = 1
-//        dateLabel.animate()
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplicationDidEnterBackgroundNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(AppBackFromBackground), name: UIApplicationDidBecomeActiveNotification, object: nil)
         
         
     }
@@ -126,7 +127,7 @@ class AnimationView: UIViewController {
                     
                     let userImageFile = post!.HeroImg
                     
-                    self.inAnimation()
+                    
                     
                     userImageFile.getDataInBackgroundWithBlock {
                         (imageData: NSData?, error: NSError?) -> Void in
@@ -135,14 +136,26 @@ class AnimationView: UIViewController {
                     
                                 let image = UIImage(data:imageData)
                                 self.bigImg.image = image
+                                
                             }
+                            
                         }
+                        
                     }
+                    
+                    self.inAnimation()
                 }
                 
             } else {
                 // Log details of the failure
                 print("Error: \(error!) \(error!.userInfo)")
+                
+                UIView.animateWithDuration(0.1, animations: { 
+                    self.boxImage.frame = CGRectMake((self.view.frame.size.width / 2) - 10, (self.view.frame.size.height / 2) - 10, 20, 20)
+                    self.bigImg.frame = CGRectMake((self.view.frame.size.width / 2) - 10, (self.view.frame.size.height / 2) - 10, 20, 20)
+                })
+                
+                self.titleLabel.text = "No internet connection"
             }
         }
         
@@ -198,31 +211,32 @@ class AnimationView: UIViewController {
             self.bigImg.layer.cornerRadius = 1
             self.bigImg.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 150)
             
-            }
+        }
         
-            self.bigImg.opacity = 0
-            self.bigImg.duration = 3
-            self.bigImg.animate()
+        
+        self.bigImg.opacity = 0
+        self.bigImg.duration = 0.5
+        self.bigImg.animate()
             
-            self.titleLabel.y = -10
-            self.titleLabel.opacity = 0
-            self.titleLabel.duration = 0.9
-            self.titleLabel.delay = 1
-            self.titleLabel.animate()
+        self.titleLabel.y = -10
+        self.titleLabel.opacity = 0
+        self.titleLabel.duration = 0.9
+        self.titleLabel.delay = 1
+        self.titleLabel.animate()
             
-            self.tagLabel.y = -10
-            self.tagLabel.opacity = 0
-            self.tagLabel.duration = 0.9
-            self.tagLabel.delay = 1.5
-            self.tagLabel.animate()
+        self.tagLabel.y = -10
+        self.tagLabel.opacity = 0
+        self.tagLabel.duration = 0.9
+        self.tagLabel.delay = 1.5
+        self.tagLabel.animate()
             
-            self.ReadButton.hidden = false
-            self.ReadButton.setTitle("Read", forState: .Normal)
-            self.ReadButton.y = -10
-            self.ReadButton.duration = 0.9
-            self.ReadButton.opacity = 0
-            self.ReadButton.delay = 1.5
-            self.ReadButton.animate()           
+        self.ReadButton.hidden = false
+        self.ReadButton.setTitle("Read", forState: .Normal)
+        self.ReadButton.y = -10
+        self.ReadButton.duration = 0.9
+        self.ReadButton.opacity = 0
+        self.ReadButton.delay = 1.5
+        self.ReadButton.animate()
     }
     
     
@@ -249,6 +263,12 @@ class AnimationView: UIViewController {
         
     }
     
+    func appMovedToBackground() {
+        print("App moved to background!")
+    }
     
+    func AppBackFromBackground(){
+        print("backfrom foreground")
+    }
     
 }
