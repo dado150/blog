@@ -85,11 +85,7 @@ class Menu: UIViewController {
     }
     
     
-    
-
-    
-    
-    
+     
     func buttonAction(sender:UIButton!){
         
         if (storage.boolForKey("notification")) == true {
@@ -180,7 +176,6 @@ class Menu: UIViewController {
     }
     
     func appMovedToBackground() {
-        print("App moved to background!")
     }
     
     func AppBackFromBackground(){
@@ -188,12 +183,10 @@ class Menu: UIViewController {
         if goToSettings == true {
             
             if UIApplication.sharedApplication().currentUserNotificationSettings()?.types.rawValue != 0 {
-                print("backtoSettings and ON")
                 notificationOn()
                 goToSettings = false
             }
         } else {
-            print("backtoSettings and OFF")
             goToSettings = false
         }
     }

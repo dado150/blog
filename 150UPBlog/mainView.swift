@@ -64,9 +64,9 @@ class mainView: UIViewController {
         
         let components = cal.components([.Day , .Month , .Year], fromDate: date)
         let yearLong =  components.year
-        var month = components.month
-        var day = components.day
-        var year = yearLong%100
+        let month = components.month
+        let day = components.day
+        let year = yearLong%100
         
         let imageName = "bg.png"
         image = UIImage(named: imageName)!
@@ -232,9 +232,7 @@ class mainView: UIViewController {
                     post!.saveInBackgroundWithBlock {
                         (success: Bool, error: NSError?) -> Void in
                         if (success) {
-                            
-                            print("Saved")
-                            
+                                                        
                         } else {
                             
                         }
