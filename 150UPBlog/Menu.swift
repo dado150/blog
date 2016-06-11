@@ -19,27 +19,14 @@ class Menu: UIViewController {
     var button = UIButton()
     var introText = UILabel()
     var credits = UILabel()
-    
-    var goToSettings = Bool()
+    var goToSettings:Bool = false
     
     let storage = NSUserDefaults.standardUserDefaults()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey("launchedBefore")
-        if launchedBefore  {
-            print("Not first launch.")
-        }
-        else {
-            print("First launch, setting NSUserDefault.")
-            storage.setBool(true, forKey: "launchedBefore")
-            storage.setInteger(19, forKey: "timeNotification")
-        }
-        
-        
+                
         introText = UILabel(frame: CGRect(x: 0, y: 60, width: 200.00, height: 60.00));
         introText.lineBreakMode = .ByWordWrapping // or NSLineBreakMode.ByWordWrapping
         introText.numberOfLines = 0
@@ -91,19 +78,24 @@ class Menu: UIViewController {
         logo.frame = CGRect(x: (200 - 73) / 2, y: view.frame.size.height - 141 , width: 73, height: 44)
         view.addSubview(logo)
         
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplicationDidEnterBackgroundNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(AppBackFromBackground), name: UIApplicationDidBecomeActiveNotification, object: nil)
+        
     }
+    
+    
+    
+
+    
     
     
     func buttonAction(sender:UIButton!){
         
         if (storage.boolForKey("notification")) == true {
-            sender.setTitle("OFF", forState: .Normal)
-            buttonTime.userInteractionEnabled = false
-            buttonTime.alpha = 0.1
-            atText.alpha = 0.1
-            storage.setBool(false, forKey: "notification")
             
-            UIApplication.sharedApplication().cancelAllLocalNotifications()            
+           notificationOff()
+            sender.setTitle("OFF", forState: .Normal)
         }
             
         else {
@@ -118,10 +110,9 @@ class Menu: UIViewController {
                     let settingsUrl = NSURL(string: UIApplicationOpenSettingsURLString)
                     if let url = settingsUrl {
                         UIApplication.sharedApplication().openURL(url)
+                        self.goToSettings = true                   
+                        
                     }
-                    
-                    self.goToSettings = true
-                    
                     
                 }))
                 
@@ -133,34 +124,45 @@ class Menu: UIViewController {
                 
             } else {
                 
-                sender.setTitle("ON", forState: .Normal)
-                buttonTime.userInteractionEnabled = true
-                buttonTime.alpha = 1
-                atText.alpha = 1
-                storage.setBool(true, forKey: "notification")
-                
-                notificatonScheduling()
+                notificationOn()
+                sender.setTitle("ON", forState: .Normal)}
+            
             }
-     
-        }
-        
     }
     
-    func setTimeNotification(sender:UIButton!){
+    
+    func setTimeNotification(){
         
         NSUserDefaults.incrementIntegerForKey("timeNotification")
         
-        if storage.integerForKey("timeNotification") >= 24{
-            storage.setInteger(0, forKey: "timeNotification")
-        }
+            if storage.integerForKey("timeNotification") >= 24{
+                storage.setInteger(0, forKey: "timeNotification")
+            }
         
-        sender.setTitle("\(storage.valueForKey("timeNotification")!):00", forState: .Normal)
+            buttonTime.setTitle("\(storage.valueForKey("timeNotification")!):00", forState: .Normal)
+
         
-        UIApplication.sharedApplication().cancelAllLocalNotifications()
-        notificatonScheduling()
-        
+        notificationOn()
     }
     
+    
+    func notificationOn(){
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        button.setTitle("ON", forState: .Normal)
+        notificatonScheduling()
+        buttonTime.userInteractionEnabled = true
+        buttonTime.alpha = 1
+        atText.alpha = 1
+        storage.setBool(true, forKey: "notification")
+    }
+    
+    func notificationOff(){
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        button.setTitle("OFF", forState: .Normal)
+        buttonTime.alpha = 0.1
+        atText.alpha = 0.1
+        storage.setBool(false, forKey: "notification")
+    }
     
     func notificatonScheduling() {
         
@@ -175,9 +177,26 @@ class Menu: UIViewController {
         notification.repeatInterval = NSCalendarUnit.Day
         notification.userInfo = ["dailyNotification": "150UP"]
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
-    
     }
     
+    func appMovedToBackground() {
+        print("App moved to background!")
+    }
+    
+    func AppBackFromBackground(){
+        
+        if goToSettings == true {
+            
+            if UIApplication.sharedApplication().currentUserNotificationSettings()?.types.rawValue != 0 {
+                print("backtoSettings and ON")
+                notificationOn()
+                goToSettings = false
+            }
+        } else {
+            print("backtoSettings and OFF")
+            goToSettings = false
+        }
+    }
     
 }
 

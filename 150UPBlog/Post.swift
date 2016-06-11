@@ -15,6 +15,8 @@ class Post: PFObject, PFSubclassing {
     @NSManaged var Title: String
     @NSManaged var tag: String
     @NSManaged var URL: String
+    @NSManaged var Action: String
+    @NSManaged var Visit: Int
     
     static func parseClassName() -> String {
         return "Post"

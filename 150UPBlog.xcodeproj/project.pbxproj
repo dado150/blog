@@ -25,6 +25,7 @@
 		0B7E7F791CF3836C0080B419 /* 4b50c837011735.5731d42840423.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B7E7F781CF3836C0080B419 /* 4b50c837011735.5731d42840423.jpg */; };
 		0B8BA6611CF9DD58001BB7A6 /* lineHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BA6601CF9DD58001BB7A6 /* lineHeight.swift */; };
 		0BA0CC291CFCD25C00D56892 /* 150up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA0CC281CFCD25C00D56892 /* 150up.png */; };
+		0BA940901D05C8D000F01F5D /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9408F1D05C8D000F01F5D /* mainView.swift */; };
 		1E6F84DCFD854C769B1A4384 /* Pods_150UPBlogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE0FF9159F8C50A9B8F47E6 /* Pods_150UPBlogUITests.framework */; };
 		9F5821BCA07DBAEEBDC49E51 /* Pods_150UPBlogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D265F7F6316BC326EEC57B /* Pods_150UPBlogTests.framework */; };
 		D636C9F87346C440EDBF6ACE /* Pods_150UPBlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385D383DE3355AE3F57D6A92 /* Pods_150UPBlog.framework */; };
@@ -72,6 +73,7 @@
 		0B7E7F781CF3836C0080B419 /* 4b50c837011735.5731d42840423.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4b50c837011735.5731d42840423.jpg; sourceTree = "<group>"; };
 		0B8BA6601CF9DD58001BB7A6 /* lineHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lineHeight.swift; sourceTree = "<group>"; };
 		0BA0CC281CFCD25C00D56892 /* 150up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 150up.png; sourceTree = "<group>"; };
+		0BA9408F1D05C8D000F01F5D /* mainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
 		0BDF05F41CF0CD7F005FA3F6 /* Spring.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spring.framework; path = "../../Library/Developer/Xcode/DerivedData/150UPBlog-edhplpuuldunpkgrfymqknmhhsos/Build/Products/Debug-iphonesimulator/Spring/Spring.framework"; sourceTree = "<group>"; };
 		385D383DE3355AE3F57D6A92 /* Pods_150UPBlog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_150UPBlog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47030BEA83F47B74A578218D /* Pods-150UPBlogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-150UPBlogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-150UPBlogTests/Pods-150UPBlogTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				0B8BA6601CF9DD58001BB7A6 /* lineHeight.swift */,
 				0B7E7F721CF30F670080B419 /* Post.swift */,
 				0B4477B21CF0C3C0002CEEED /* Main.storyboard */,
+				0BA9408F1D05C8D000F01F5D /* mainView.swift */,
 				0B7E7F741CF314490080B419 /* Menu.swift */,
 				0B4477B81CF0C3C0002CEEED /* Assets.xcassets */,
 				0B4477BA1CF0C3C0002CEEED /* LaunchScreen.storyboard */,
@@ -480,6 +483,7 @@
 			files = (
 				0B4477B71CF0C3C0002CEEED /* _50UPBlog.xcdatamodeld in Sources */,
 				0B4477AF1CF0C3C0002CEEED /* AppDelegate.swift in Sources */,
+				0BA940901D05C8D000F01F5D /* mainView.swift in Sources */,
 				0B7E7F771CF37B7F0080B419 /* AnimationView.swift in Sources */,
 				0B7E7F731CF30F670080B419 /* Post.swift in Sources */,
 				0B8BA6611CF9DD58001BB7A6 /* lineHeight.swift in Sources */,

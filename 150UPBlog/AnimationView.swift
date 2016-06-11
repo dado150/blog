@@ -249,9 +249,7 @@ class AnimationView: UIViewController {
         
         if UIApplication.sharedApplication().currentUserNotificationSettings()?.types.rawValue != 0 {
             
-            menu.button.setTitle("ON", forState: .Normal)
-            menu.notificatonScheduling()
-            storage.setBool(true, forKey: "notification")
+            menu.notificationOn()
             
         } else {
             
