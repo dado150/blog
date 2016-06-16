@@ -48,7 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B4477AB1CF0C3BF002CEEED /* 150UPBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 150UPBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B4477AB1CF0C3BF002CEEED /* 1UP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1UP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4477AE1CF0C3C0002CEEED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B4477B31CF0C3C0002CEEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B4477B61CF0C3C0002CEEED /* _50UPBlog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _50UPBlog.xcdatamodel; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		0B4477AC1CF0C3BF002CEEED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B4477AB1CF0C3BF002CEEED /* 150UPBlog.app */,
+				0B4477AB1CF0C3BF002CEEED /* 1UP.app */,
 				0B4477C21CF0C3C0002CEEED /* 150UPBlogTests.xctest */,
 				0B4477CD1CF0C3C0002CEEED /* 150UPBlogUITests.xctest */,
 			);
@@ -228,7 +228,7 @@
 			);
 			name = 150UPBlog;
 			productName = 150UPBlog;
-			productReference = 0B4477AB1CF0C3BF002CEEED /* 150UPBlog.app */;
+			productReference = 0B4477AB1CF0C3BF002CEEED /* 1UP.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0B4477C11CF0C3C0002CEEED /* 150UPBlogTests */ = {
@@ -628,13 +628,13 @@
 			baseConfigurationReference = 920DDA95F3D91C6DCF202A97 /* Pods-150UPBlog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = 150UPBlog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.150up..-50UPBlog";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = 1UP;
+				PROVISIONING_PROFILE = "213da49a-9005-4954-832e-a81edc58c7c2";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -644,13 +644,13 @@
 			baseConfigurationReference = CBEF61ECA6811EAEAA74BB9A /* Pods-150UPBlog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: DAvide  Colla (94CC9RXXA8)";
 				INFOPLIST_FILE = 150UPBlog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.150up..-50UPBlog";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = 1UP;
+				PROVISIONING_PROFILE = "213da49a-9005-4954-832e-a81edc58c7c2";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

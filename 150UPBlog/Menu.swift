@@ -27,25 +27,25 @@ class Menu: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        introText = UILabel(frame: CGRect(x: 0, y: 60, width: 200.00, height: 60.00));
+        introText = UILabel(frame: CGRect(x: 0, y: 40, width: 200.00, height: 60.00));
         introText.lineBreakMode = .ByWordWrapping // or NSLineBreakMode.ByWordWrapping
         introText.numberOfLines = 0
-        introText.text = "Turn my \n notification"
+        introText.text = "Turn my daily \n notifications"
         introText.setLineHeight(4)
         introText.textAlignment = NSTextAlignment.Center
         introText.textColor = UIColor.whiteColor()
-        introText.font = UIFont (name: "Brown-Regular", size: 20)
+        introText.font = UIFont (name: "Brown-Regular", size: 17)
         self.view.addSubview(introText)
         
         
         button = UIButton(type: UIButtonType.System) as UIButton
-        button.frame = CGRectMake(0, 120, 200, 50)
+        button.frame = CGRectMake(0, 100, 200, 50)
         button.titleLabel?.font = UIFont (name: "Brown-Bold", size: 34)
         button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         button.addTarget(self, action: #selector(buttonAction), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(button)
         
-        atText = UILabel(frame: CGRect(x: 0, y: 180, width: 200.00, height: 40.00));
+        atText = UILabel(frame: CGRect(x: 0, y: 160, width: 200.00, height: 40.00));
         atText.lineBreakMode = .ByWordWrapping // or NSLineBreakMode.ByWordWrapping
         atText.numberOfLines = 0
         atText.text = "at"
@@ -55,7 +55,7 @@ class Menu: UIViewController {
         self.view.addSubview(atText)
         
         buttonTime = UIButton(type: UIButtonType.System) as UIButton
-        buttonTime.frame = CGRectMake(0, 210, 200, 50)
+        buttonTime.frame = CGRectMake(0, 190, 200, 50)
         buttonTime.titleLabel?.font = UIFont (name: "Brown-Bold", size: 34)
         buttonTime.setTitle("\(storage.valueForKey("timeNotification")!):00", forState: .Normal)
         buttonTime.setTitleColor(UIColor.whiteColor(), forState: .Normal)
@@ -65,7 +65,7 @@ class Menu: UIViewController {
         credits = UILabel(frame: CGRect(x: 0, y: view.frame.size.height - 100, width: 200.00, height: 80.00));
         credits.lineBreakMode = .ByWordWrapping // or NSLineBreakMode.ByWordWrapping
         credits.numberOfLines = 0
-        credits.text = "Things we \n learn everyday"
+        credits.text = "Things we found \n out yesterday"
         credits.setLineHeight(4)
         credits.textAlignment = NSTextAlignment.Center
         credits.textColor = UIColor.whiteColor()
@@ -100,9 +100,9 @@ class Menu: UIViewController {
                 
                 storage.setBool(false, forKey: "notification")
                 
-                let refreshAlert = UIAlertController(title: "Refresh", message: "All data will be lost.", preferredStyle: UIAlertControllerStyle.Alert)
+                let refreshAlert = UIAlertController(title: "Notifications", message: "You don't have notifications enabled", preferredStyle: UIAlertControllerStyle.Alert)
                 
-                refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+                refreshAlert.addAction(UIAlertAction(title: "Go to settings", style: .Default, handler: { (action: UIAlertAction!) in
                     let settingsUrl = NSURL(string: UIApplicationOpenSettingsURLString)
                     if let url = settingsUrl {
                         UIApplication.sharedApplication().openURL(url)
@@ -167,8 +167,8 @@ class Menu: UIViewController {
         let date19: NSDate = cal2.dateBySettingHour(storage.integerForKey("timeNotification"), minute: 0, second: 0, ofDate: date2, options: NSCalendarOptions())!
         let notification = UILocalNotification()
         notification.fireDate = date19
-        notification.alertBody = "NOTIFICA DELLE 19"
-        notification.alertAction = "be awesome!"
+        notification.alertBody = "Your daily feed is up"
+        notification.alertAction = "Get it"
         notification.soundName = UILocalNotificationDefaultSoundName
         notification.repeatInterval = NSCalendarUnit.Day
         notification.userInfo = ["dailyNotification": "150UP"]

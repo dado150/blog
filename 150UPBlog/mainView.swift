@@ -134,6 +134,7 @@ class mainView: UIViewController {
     
     func buttonAction(sender: UIButton!) {
         UIApplication.sharedApplication().openURL(NSURL(string: link)!)
+//        screenShotMethod()
     }
     
     
@@ -286,4 +287,24 @@ class mainView: UIViewController {
         }
         
     }
+    
+    func screenShotMethod() {
+        let layer = UIApplication.sharedApplication().keyWindow!.layer
+        let scale = UIScreen.mainScreen().scale
+        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale);
+        
+        layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let screenshot = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        //var messageStr:String  = "Check out my awesome iPicSafe photo!"
+        var img: UIImage = screenshot!
+        //var shareItems:Array = [img, messageStr]
+        var shareItems:Array = [img]
+        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+        activityViewController.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypePostToWeibo, UIActivityTypeCopyToPasteboard, UIActivityTypeAddToReadingList, UIActivityTypePostToVimeo]
+        self.presentViewController(activityViewController, animated: true, completion: nil)
+        
+    }
+
 }

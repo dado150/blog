@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0B4477AA1CF0C3BF002CEEED"
-               BuildableName = "150UPBlog.app"
+               BuildableName = "1UP.app"
                BlueprintName = "150UPBlog"
                ReferencedContainer = "container:150UPBlog.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B4477AA1CF0C3BF002CEEED"
-            BuildableName = "150UPBlog.app"
+            BuildableName = "1UP.app"
             BlueprintName = "150UPBlog"
             ReferencedContainer = "container:150UPBlog.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B4477AA1CF0C3BF002CEEED"
-            BuildableName = "150UPBlog.app"
+            BuildableName = "1UP.app"
             BlueprintName = "150UPBlog"
             ReferencedContainer = "container:150UPBlog.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B4477AA1CF0C3BF002CEEED"
-            BuildableName = "150UPBlog.app"
+            BuildableName = "1UP.app"
             BlueprintName = "150UPBlog"
             ReferencedContainer = "container:150UPBlog.xcodeproj">
          </BuildableReference>
