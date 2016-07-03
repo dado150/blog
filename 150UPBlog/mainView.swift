@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import Spring
+import Social
 
 class mainView: UIViewController {
     
@@ -23,6 +24,11 @@ class mainView: UIViewController {
     var button = SpringButton()
     var link:String = String()
     var visit:Int = Int()
+    var count = 1
+    
+    var timer = NSTimer()
+    var centerX = CGFloat()
+    var centerY = CGFloat()
     
 
     @IBOutlet weak var titleLabel: SpringLabel!
@@ -112,13 +118,15 @@ class mainView: UIViewController {
         button.titleLabel?.textColor = UIColor.whiteColor()
         button.titleLabel!.font = UIFont(name: "Brown-Bold", size: 30)
         button.addTarget(self, action: #selector(buttonAction), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(selectedButton), forControlEvents: .TouchDown)
         button.hidden = true
         self.view.addSubview(button)
         
-        self.menu.view.frame.origin.x = self.menu.view.frame.origin.x - self.menu.view.frame.size.width
+        self.menu.view.frame.origin.x = self.menu.view.frame.origin.x - self.menu.view.frame.size.width 
         self.menu.view.frame.size.width = 200
         self.menu.view.backgroundColor = blue
         self.view.addSubview(self.menu.view)
+        
         
         if storage.boolForKey("notification") == true{
             menu.button.setTitle("ON", forState: .Normal)
@@ -133,12 +141,21 @@ class mainView: UIViewController {
     }
     
     func buttonAction(sender: UIButton!) {
+
         UIApplication.sharedApplication().openURL(NSURL(string: link)!)
-//        screenShotMethod()
+        sender.backgroundColor = red
+       
     }
+    
+    func selectedButton(sender:UIButton!)  {
+        sender.backgroundColor = blue
+    }
+
+    
     
     
     @IBAction func openMenu(sender: UIPanGestureRecognizer) {
+        
         if (sender.state == UIGestureRecognizerState.Changed) {
             if menuIsOpen == false{
                 let translation = sender.translationInView(self.view).x
@@ -288,23 +305,5 @@ class mainView: UIViewController {
         
     }
     
-    func screenShotMethod() {
-        let layer = UIApplication.sharedApplication().keyWindow!.layer
-        let scale = UIScreen.mainScreen().scale
-        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale);
-        
-        layer.renderInContext(UIGraphicsGetCurrentContext()!)
-        let screenshot = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        //var messageStr:String  = "Check out my awesome iPicSafe photo!"
-        var img: UIImage = screenshot!
-        //var shareItems:Array = [img, messageStr]
-        var shareItems:Array = [img]
-        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
-        activityViewController.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypePostToWeibo, UIActivityTypeCopyToPasteboard, UIActivityTypeAddToReadingList, UIActivityTypePostToVimeo]
-        self.presentViewController(activityViewController, animated: true, completion: nil)
-        
-    }
-
+    
 }

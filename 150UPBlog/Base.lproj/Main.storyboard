@@ -16,7 +16,7 @@
         <!--Menu-->
         <scene sceneID="Llq-eM-5wV">
             <objects>
-                <viewController id="3WA-JG-4YL" customClass="Menu" customModule="_50UPBlog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3WA-JG-4YL" customClass="Menu" customModule="_UP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zKd-dv-by3"/>
                         <viewControllerLayoutGuide type="bottom" id="A6R-4a-9dk"/>
@@ -34,7 +34,7 @@
         <!--Main View-->
         <scene sceneID="IDy-uD-yCf">
             <objects>
-                <viewController id="zgF-R2-ysz" customClass="mainView" customModule="_50UPBlog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zgF-R2-ysz" customClass="mainView" customModule="_UP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nQa-IE-seC"/>
                         <viewControllerLayoutGuide type="bottom" id="SmE-aH-fos"/>

@@ -17,6 +17,7 @@ class Menu: UIViewController {
     var buttonTime = UIButton()
     var atText = UILabel()
     var button = UIButton()
+    var shareButton = UIButton()
     var introText = UILabel()
     var credits = UILabel()
     var goToSettings:Bool = false
@@ -27,7 +28,7 @@ class Menu: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        introText = UILabel(frame: CGRect(x: 0, y: 40, width: 200.00, height: 60.00));
+        introText = UILabel(frame: CGRect(x: 0, y: 40, width: 200.00, height: 40.00));
         introText.lineBreakMode = .ByWordWrapping // or NSLineBreakMode.ByWordWrapping
         introText.numberOfLines = 0
         introText.text = "Turn my daily \n notifications"
@@ -39,13 +40,13 @@ class Menu: UIViewController {
         
         
         button = UIButton(type: UIButtonType.System) as UIButton
-        button.frame = CGRectMake(0, 100, 200, 50)
+        button.frame = CGRectMake(0, 90, 200, 33)
         button.titleLabel?.font = UIFont (name: "Brown-Bold", size: 34)
         button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         button.addTarget(self, action: #selector(buttonAction), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(button)
         
-        atText = UILabel(frame: CGRect(x: 0, y: 160, width: 200.00, height: 40.00));
+        atText = UILabel(frame: CGRect(x: 0, y: 150, width: 200.00, height: 13.00));
         atText.lineBreakMode = .ByWordWrapping // or NSLineBreakMode.ByWordWrapping
         atText.numberOfLines = 0
         atText.text = "at"
@@ -55,27 +56,37 @@ class Menu: UIViewController {
         self.view.addSubview(atText)
         
         buttonTime = UIButton(type: UIButtonType.System) as UIButton
-        buttonTime.frame = CGRectMake(0, 190, 200, 50)
+        buttonTime.frame = CGRectMake(0, 173, 200, 33)
         buttonTime.titleLabel?.font = UIFont (name: "Brown-Bold", size: 34)
         buttonTime.setTitle("\(storage.valueForKey("timeNotification")!):00", forState: .Normal)
         buttonTime.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         buttonTime.addTarget(self, action: #selector(setTimeNotification), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(buttonTime)
+               
+//        shareButton = UIButton(type: UIButtonType.System) as UIButton
+//        shareButton.frame = CGRectMake(0, view.frame.size.height - 80, 200, 22)
+//        shareButton.titleLabel?.font = UIFont (name: "Brown-Bold", size: 20)
+//        shareButton.setTitle("Share", forState: .Normal)
+//        shareButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+//        shareButton.addTarget(self, action: #selector(shareAction), forControlEvents: UIControlEvents.TouchUpInside)
+//        shareButton.backgroundColor = UIColor.orangeColor()
+//        self.view.addSubview(shareButton)
         
-        credits = UILabel(frame: CGRect(x: 0, y: view.frame.size.height - 100, width: 200.00, height: 80.00));
-        credits.lineBreakMode = .ByWordWrapping // or NSLineBreakMode.ByWordWrapping
-        credits.numberOfLines = 0
-        credits.text = "Things we found \n out yesterday"
-        credits.setLineHeight(4)
-        credits.textAlignment = NSTextAlignment.Center
-        credits.textColor = UIColor.whiteColor()
-        credits.font = UIFont (name: "Brown-Regular", size: 15)
-        self.view.addSubview(credits)
+//        credits = UILabel(frame: CGRect(x: 0, y: view.frame.size.height - 80, width: 200.00, height: 35.00));
+//        credits.lineBreakMode = .ByWordWrapping // or NSLineBreakMode.ByWordWrapping
+//        credits.numberOfLines = 0
+//        credits.text = "Things we found \n out yesterday"
+//        credits.setLineHeight(4)
+//        credits.textAlignment = NSTextAlignment.Center
+//        credits.textColor = UIColor.whiteColor()
+//        credits.font = UIFont (name: "Brown-Regular", size: 15)
+//        credits.backgroundColor = UIColor.orangeColor()
+//        self.view.addSubview(credits)
         
         let imageName = "150up.png"
         let image = UIImage(named: imageName)
         let logo = UIImageView(image: image!)
-        logo.frame = CGRect(x: (200 - 73) / 2, y: view.frame.size.height - 141 , width: 73, height: 44)
+        logo.frame = CGRect(x: (200 - 73) / 2, y: view.frame.size.height - 110 , width: 73, height: 44)
         view.addSubview(logo)
         
         let notificationCenter = NSNotificationCenter.defaultCenter()
@@ -85,7 +96,8 @@ class Menu: UIViewController {
     }
     
     
-     
+
+    
     func buttonAction(sender:UIButton!){
         
         if (storage.boolForKey("notification")) == true {
@@ -124,6 +136,21 @@ class Menu: UIViewController {
                 sender.setTitle("ON", forState: .Normal)}
             
             }
+    }
+    
+    
+    func shareAction(sender:UIButton!){
+        
+        let shareText = "Hello, world!"
+        let urlAPP = "https://itunes.apple.com/us/app/1upblog/id1126813326?ls=1&mt=8"
+        
+        let fileUrl = NSURL(string: urlAPP)
+        
+        let vc = UIActivityViewController(activityItems: [shareText, fileUrl!], applicationActivities: [])
+        
+        vc.excludedActivityTypes = [UIActivityTypeOpenInIBooks, UIActivityTypeAirDrop, UIActivityTypeAddToReadingList, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypePostToVimeo]
+        
+        self.view.window?.rootViewController!.presentViewController(vc, animated: true, completion: nil)
     }
     
     
