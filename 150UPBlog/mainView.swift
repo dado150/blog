@@ -45,6 +45,8 @@ class mainView: UIViewController {
     
     let storage = NSUserDefaults.standardUserDefaults()
     
+    @IBOutlet weak var marginTopTitle: NSLayoutConstraint!
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
     }
@@ -52,6 +54,7 @@ class mainView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        marginTopTitle.constant = self.view.frame.size.height - 150 + 45
         let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey("launchedBefore")
         
         if launchedBefore  {

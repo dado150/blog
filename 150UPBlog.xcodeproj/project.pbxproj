@@ -628,13 +628,13 @@
 			baseConfigurationReference = 920DDA95F3D91C6DCF202A97 /* Pods-150UPBlog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: davide@150up.com (4Y5UZAS8W5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: DAvide  Colla (94CC9RXXA8)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = 150UPBlog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.150up.1up;
 				PRODUCT_NAME = 1UP;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a223859c-3713-4abf-b80f-3dabd2be39ad";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -644,13 +644,13 @@
 			baseConfigurationReference = CBEF61ECA6811EAEAA74BB9A /* Pods-150UPBlog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: davide@150up.com (4Y5UZAS8W5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wired sas di Davide Colla & C (X84N32C2E5)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = 150UPBlog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.150up.1up;
 				PRODUCT_NAME = 1UP;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a223859c-3713-4abf-b80f-3dabd2be39ad";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -44,13 +44,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cs-Ge-W2G" customClass="SpringLabel" customModule="Spring">
-                                <rect key="frame" x="21" y="496" width="558" height="24"/>
+                                <rect key="frame" x="21" y="0.0" width="558" height="24"/>
                                 <fontDescription key="fontDescription" name="Brown-Bold" family="Brown" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGd-j3-fjP" customClass="SpringLabel" customModule="Spring">
-                                <rect key="frame" x="21" y="522" width="558" height="21"/>
+                                <rect key="frame" x="21" y="28" width="558" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="VZg-DF-bmV"/>
                                 </constraints>
@@ -63,17 +63,24 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="7Cs-Ge-W2G" firstAttribute="leading" secondItem="j0O-bP-jZj" secondAttribute="leading" constant="21" id="749-pn-iUV"/>
-                            <constraint firstItem="SmE-aH-fos" firstAttribute="top" secondItem="7Cs-Ge-W2G" secondAttribute="bottom" constant="80" id="VhB-rj-gZ2"/>
+                            <constraint firstItem="7Cs-Ge-W2G" firstAttribute="top" secondItem="j0O-bP-jZj" secondAttribute="top" id="C9e-TS-Q86"/>
                             <constraint firstAttribute="trailing" secondItem="7Cs-Ge-W2G" secondAttribute="trailing" constant="21" id="dY1-bW-xa4"/>
                             <constraint firstAttribute="trailing" secondItem="DGd-j3-fjP" secondAttribute="trailing" constant="21" id="jdR-MU-MNy"/>
+                            <constraint firstItem="DGd-j3-fjP" firstAttribute="top" secondItem="7Cs-Ge-W2G" secondAttribute="bottom" id="kmX-zq-HYr"/>
                             <constraint firstItem="DGd-j3-fjP" firstAttribute="leading" secondItem="j0O-bP-jZj" secondAttribute="leading" constant="21" id="v6Z-LO-nfL"/>
-                            <constraint firstItem="DGd-j3-fjP" firstAttribute="top" secondItem="7Cs-Ge-W2G" secondAttribute="bottom" constant="2" id="wQ9-JI-qIK"/>
+                            <constraint firstItem="DGd-j3-fjP" firstAttribute="top" secondItem="7Cs-Ge-W2G" secondAttribute="bottom" constant="4" id="wQ9-JI-qIK"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="kmX-zq-HYr"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="aVP-Ow-6xt" appends="YES" id="OyG-M5-FNP"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="marginTopTitle" destination="C9e-TS-Q86" id="PqF-pe-FKB"/>
                         <outlet property="tagLabel" destination="DGd-j3-fjP" id="WrP-Tq-NgM"/>
                         <outlet property="titleLabel" destination="7Cs-Ge-W2G" id="jr8-MV-8cM"/>
                     </connections>
