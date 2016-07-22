@@ -160,8 +160,12 @@ class mainView: UIViewController {
     @IBAction func openMenu(sender: UIPanGestureRecognizer) {
         
         if (sender.state == UIGestureRecognizerState.Changed) {
-            if menuIsOpen == false{
+            
+            if menuIsOpen == false {
+                
                 let translation = sender.translationInView(self.view).x
+                
+                print(translation)
                 if (translation > self.menu.view.frame.size.width) {
                     self.menu.view.frame.origin.x = 0
                 }
@@ -172,12 +176,16 @@ class mainView: UIViewController {
             else {
                 
                 let translation = sender.translationInView(self.view).x
+                print(translation)
                 self.menu.view.frame.origin.x = translation
                 if (translation > 0) {
                     self.menu.view.frame.origin.x = 0
                 }
             }
         }
+            
+            
+            
         else if (sender.state == UIGestureRecognizerState.Ended){
             if self.menu.view.frame.origin.x > -(self.menu.view.frame.size.width / 2) {
                 UIView.animateWithDuration(0.3) {
