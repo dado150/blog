@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zgF-R2-ysz">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Brown-Bold.otf">
+            <string>Brown-Bold</string>
+        </mutableArray>
+        <mutableArray key="Brown-Regular.otf">
+            <string>Brown-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Menu-->
+        <scene sceneID="Llq-eM-5wV">
+            <objects>
+                <viewController id="3WA-JG-4YL" customClass="Menu" customModule="_UP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zKd-dv-by3"/>
+                        <viewControllerLayoutGuide type="bottom" id="A6R-4a-9dk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="600" id="Cyb-F1-utm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.83137254901960789" green="0.047058823529411764" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHH-pY-w0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075" y="497"/>
+        </scene>
+        <!--Main View-->
+        <scene sceneID="IDy-uD-yCf">
+            <objects>
+                <viewController id="zgF-R2-ysz" customClass="mainView" customModule="_UP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nQa-IE-seC"/>
+                        <viewControllerLayoutGuide type="bottom" id="SmE-aH-fos"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j0O-bP-jZj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cs-Ge-W2G" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="21" y="0.0" width="558" height="24"/>
+                                <fontDescription key="fontDescription" name="Brown-Bold" family="Brown" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGd-j3-fjP" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="21" y="28" width="558" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="VZg-DF-bmV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Brown-Regular" family="Brown" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="7Cs-Ge-W2G" firstAttribute="leading" secondItem="j0O-bP-jZj" secondAttribute="leading" constant="21" id="749-pn-iUV"/>
+                            <constraint firstItem="7Cs-Ge-W2G" firstAttribute="top" secondItem="j0O-bP-jZj" secondAttribute="top" id="C9e-TS-Q86"/>
+                            <constraint firstAttribute="trailing" secondItem="7Cs-Ge-W2G" secondAttribute="trailing" constant="21" id="dY1-bW-xa4"/>
+                            <constraint firstAttribute="trailing" secondItem="DGd-j3-fjP" secondAttribute="trailing" constant="21" id="jdR-MU-MNy"/>
+                            <constraint firstItem="DGd-j3-fjP" firstAttribute="top" secondItem="7Cs-Ge-W2G" secondAttribute="bottom" id="kmX-zq-HYr"/>
+                            <constraint firstItem="DGd-j3-fjP" firstAttribute="leading" secondItem="j0O-bP-jZj" secondAttribute="leading" constant="21" id="v6Z-LO-nfL"/>
+                            <constraint firstItem="DGd-j3-fjP" firstAttribute="top" secondItem="7Cs-Ge-W2G" secondAttribute="bottom" constant="4" id="wQ9-JI-qIK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="kmX-zq-HYr"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aVP-Ow-6xt" appends="YES" id="OyG-M5-FNP"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="marginTopTitle" destination="C9e-TS-Q86" id="PqF-pe-FKB"/>
+                        <outlet property="tagLabel" destination="DGd-j3-fjP" id="WrP-Tq-NgM"/>
+                        <outlet property="titleLabel" destination="7Cs-Ge-W2G" id="jr8-MV-8cM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t1S-hT-NaW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="aVP-Ow-6xt">
+                    <connections>
+                        <action selector="openMenu:" destination="zgF-R2-ysz" id="ArZ-f8-axa"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1740" y="497"/>
+        </scene>
+    </scenes>
+</document>
